@@ -1,0 +1,40 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* .newsList{
+    padding: 0px;
+}*/
+.newsList div{
+  text-align: left;
+} 
+.newsImgBlock{
+  float:left;
+  width:20%;
+  padding:10px;
+}
+.newsBox{
+  padding: 10px;
+  width: 80%;
+  float: right;
+}
+.newsBox p.content{
+    margin:10px 0 20px;
+}
+.newsImg{
+  width: 100%;
+  border:5px inset #e5e4e4;
+}
+a.newsLink{
+  font-size: 17px;
+}
+.newsInfoPanel span , .newsInfoPanel p{
+  font-size: 12px;
+}
+.newsInfoPanel p{
+  margin-bottom: 3px;
+}
+.badge-info {
+  background-color: #3a87ad;
+}
