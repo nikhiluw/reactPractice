@@ -105,15 +105,13 @@ class NewsList extends React.Component{
                 <div className="newsList col-lg-12">
                     {
                         newsFeedArray.map((news, index) => {
-                            console.log(news);
                             return (
-                            <div className="row">
+                            <div className="row" key={index}>
                                 {
-                                news.map((col) => {
-                                    console.log(col);
+                                news.map((col, index1) => {
                                         return(
-                                            <div className="newsList col-lg-6">
-                                                <NewsItem key={index} news={col}/>
+                                            <div className="newsList col-lg-6" key={index+"-"+index1} >
+                                                <NewsItem news={col}/>
                                             </div>
                                         )
                                     })

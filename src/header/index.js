@@ -1,5 +1,7 @@
 import React from 'react';
 //import ReactDom from 'react-dom';
+import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
 
 function Header() {
 	
@@ -19,10 +21,16 @@ function Header() {
 
 
 				    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      <ul className="nav navbar-nav">
-				        <li className="active"><a href="http://google.com/">Finance<span className="sr-only">(current)</span></a></li>
-				        <li><a href="http://google.com/">Sports</a></li>
-				      </ul>
+							<Switch>
+								<ul className="nav navbar-nav">
+									<li className="active">
+										<Link	to="/news" >News<span className="sr-only">(current)</span></Link>
+									</li>
+									{/* <li>
+										<Link	to="/news" >Matrics </Link>
+									</li> */}
+								</ul>
+							</Switch>
 				   	</div>     
 				</div>
 			</nav>		

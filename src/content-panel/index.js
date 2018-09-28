@@ -32,7 +32,7 @@ class ContentPanel extends React.Component{
                 <div className="col-lg-8 col-lg-offset-2">
                     <SearchPanel onSearchTextChange={this.handleSearchTextChange}/>
                     <p>
-                        <span className="badge badge-info">{this.state.totResult}</span> Result{this.state.totResult == 1 ? "" : "s"} found
+                        <span className="badge badge-info">{this.state.totResult}</span> Result{this.state.totResult === 1 ? "" : "s"} found
                     </p>    
                     
                 </div>

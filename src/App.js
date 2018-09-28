@@ -4,14 +4,17 @@ import './App.css';
 import Header from './header';
 import Footer from './footer';
 import ContentPanel from './content-panel';
+import {BrowserRouter, Router} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <ContentPanel />
-        <Footer />
+        <Router>
+          <Header />
+          <ContentPanel />
+          <Footer />
+        </Router>
       </div>
         
     );
