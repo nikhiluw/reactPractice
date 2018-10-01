@@ -28,6 +28,10 @@ footer {
 .mb20{
   margin-bottom: 20px;
 }
+.matricsTable{
+  width: 500px;
+  margin:0 auto;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

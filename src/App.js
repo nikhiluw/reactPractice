@@ -4,19 +4,27 @@ import './App.css';
 import Header from './header';
 import Footer from './footer';
 import ContentPanel from './content-panel';
-import {BrowserRouter, Router} from 'react-router-dom';
+import Matrics from './matrics';
+import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
+
+import Home from './home';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Router>
-          <Header />
-          <ContentPanel />
-          <Footer />
-        </Router>
-      </div>
+      <Router>
+        <div className="App">
         
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/news" component={ContentPanel}/>
+            <Route path="/matrics" component={Matrics} />
+            
+          </Switch>
+          <Footer />
+        </div>
+      </Router>  
     );
   }
 }

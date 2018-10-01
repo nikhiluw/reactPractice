@@ -1,6 +1,6 @@
 import React from 'react';
 //import ReactDom from 'react-dom';
-import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 
 function Header() {
@@ -16,21 +16,18 @@ function Header() {
 					        <span className="icon-bar"></span>
 					        <span className="icon-bar"></span>
 					      </button>
-					      <a className="navbar-brand" href="http://google.com/">XYZ News</a>
+						  <Link className="navbar-brand" to="/">React Portal</Link>	
+					      {/* <a className="navbar-brand" href="http://google.com/">XYZ News</a> */}
 					</div>
 
 
 				    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<Switch>
-								<ul className="nav navbar-nav">
-									<li className="active">
-										<Link	to="/news" >News<span className="sr-only">(current)</span></Link>
-									</li>
-									{/* <li>
-										<Link	to="/news" >Matrics </Link>
-									</li> */}
-								</ul>
-							</Switch>
+							
+							<ul className="nav navbar-nav">
+								<li className="active"> <Link to="/news" >News<span className="sr-only">(current)</span></Link> </li>
+								<li> <Link to="/matrics" >Matrics </Link> </li>
+							</ul>
+							
 				   	</div>     
 				</div>
 			</nav>		
