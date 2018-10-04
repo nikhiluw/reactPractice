@@ -3,25 +3,32 @@ import React from 'react';
 class SubMatricsInp extends React.Component{
     constructor(props){
         super(props);
-        this.populateSubMatrics = this.populateSubMatrics.bind(this);    
+        //this.populateSubMatrics = this.populateSubMatrics.bind(this);    
+        this.onMatricsChange = this.onMatricsChange.bind(this);
     }
 
-    populateSubMatrics = () => {
+    onMatricsChange(){
         var x = parseInt(document.getElementById("subX").value, 10);
         var y = parseInt(document.getElementById("subY").value, 10);
-        var matTbl = document.getElementById("subMatrixTable");
-        var str  = "";
+        this.props.onSubMatricsChange(x, y);
+    }
 
-        for (var i = 0; i < y; i++) {
-            str += "<tbody><tr>";
-            var tempStr = "";
-            for (var j = 0; j < x; j++) {
-                tempStr += "<td><input type='number' class='m"+i+"-"+j+" form-control' /></td>";
-            }
-            str += tempStr+"</tr>";
-        }
-        matTbl.innerHTML = str+"</tbody>";
-	}
+    // populateSubMatrics = () => {
+    //     var x = parseInt(document.getElementById("subX").value, 10);
+    //     var y = parseInt(document.getElementById("subY").value, 10);
+    //     var matTbl = document.getElementById("subMatrixTable");
+    //     var str  = "";
+
+    //     for (var i = 0; i < y; i++) {
+    //         str += "<tbody><tr>";
+    //         var tempStr = "";
+    //         for (var j = 0; j < x; j++) {
+    //             tempStr += "<td><input type='number' id='m"+i+"-"+j+"' class='form-control' /></td>";
+    //         }
+    //         str += tempStr+"</tr>";
+    //     }
+    //     matTbl.innerHTML = str+"</tbody>";
+	// }
 
     render(){
         return(
@@ -38,7 +45,7 @@ class SubMatricsInp extends React.Component{
                         <input type="number" id="subY" className="form-control"/>
                     </div>
                     <div className="col-lg-3">
-                        <button type="button" id="generateBtn" className="btn btn-primary" onClick={this.populateSubMatrics}>Generate Sub Matrix</button>
+                        <button type="button" id="generateBtn" className="btn btn-primary" onClick={this.onMatricsChange}>Generate Sub Matrix</button>
                     </div>
                         
                 </div>
